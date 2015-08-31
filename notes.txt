@@ -1,0 +1,11 @@
+
+TODO:
+
+- Get an appropriate arrow svg. 
+- from the rotation it looks like the arrow is rotating around the central point of its height and width. Is there some way to change this so it rotates around the center of it's base?
+
+To Research / Note
+- Javascript setInterval() method (pass it the function name, not the returned value etc.) and other JS timing methods
+- CSS animations
+
+- More css positioning research

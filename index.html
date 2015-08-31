@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+	<title>Foundations Week 1: Guessing Game</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Fullstack Foundations First Week Project: Guessing Game HTML/CSS">
+
+	<!-- Javascript -->
+	<script src="ext_scripts/jquery.js"></script>
+	<script src="ext_scripts/bootstrap.js"></script>
+	<script src="style.js"></script>
+	<script src="http://d3js.org/d3.v3.min.js"></script> 
+	<!-- CSS -->
+	<link rel="stylesheet" href="ext_scripts/bootstrap.css">
+	<link rel="stylesheet" href="style.css">	
+</head>
+<body>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-2">
+			<h2 class="lives_title">Lives Remaining</h2>
+			<div class="lives_container">
+				<div class="lives2"></div> <!-- How to make the lives abjust to height? -->
+			</div>
+		</div>
+		<div class="col-xs-8">
+			<div class="jumbotron">
+			<div class="title"  id="main_title">
+
+				<h1>The Wrong Wall Guessing Game</h1>
+			</div>
+			<!-- <div class="jumbotron"> -->
+			 	<!-- <h1>Guessing Game</h1> --> <!-- funky font here -->
+				<h2 class="page-header"> I am thinking of a number between 1 and 100. </h2><p class="leader">Can you guess what it is?</p>
+			</div>
+			<div class="row">
+				<input type="text" class="center-block guess_value" id="guess_value"/>
+				<button class="btn btn-lg center-block">Guess!</button>
+				<a class="restart center-block hidden-sm hidden-xs">Restart</a>
+			</div>
+		</div>
+		<div class="col-xs-2">
+			<div class="row">
+				<h2 class="temp_title">Hot or Not?</h2>	
+			</div>
+			<div class="row">
+				<div class="col-xs-4 jumanji">
+					<div class="arrow_container">
+						<img class="arrow" src="img/arrow-up.svg" alt="arrow">
+					</div>
+				</div>
+				<div class="col-xs-8">
+					<div class="temp_guage"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade  container-fluid" role="dialog">
+  <div class="modal-dialog">
+
+  <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-body">
+        <h2>You Win!</h2>
+        <a href="http://thecatapi.com"><img class="img-responsive center-block" src="http://thecatapi.com/api/images/get?format=src&type=gif"></a>
+      </div>
+     <!-- </div> -->
+    </div> 
+ </div> 
+</div>
+<!-- Lose Modal -->
+<div id="loseModal" class="modal fade container-fluid">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<h2>You Lose! Sorry :(</h2>
+				<svg></svg>
+			</div>
+			<div class="modal-footer">
+				<a id="reset" type="button" class="btn btn-default center-block" data-dismiss="modal">Try Again</a>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+</body>
+</html>
